@@ -21,7 +21,7 @@ const usersList=[
   {
     id:2,
     userIcon:"https://assets.ccbp.in/frontend/react-js/male-avatar-img.png",
-    username:"Lorem Ipsum",
+    username:"Audem Milne",
     message:"Lorem Ipsum is simply duumy text of printing and typesetting industry. Lorem ipsum is",
     loveLike:2,
     views:2,
@@ -31,8 +31,8 @@ const usersList=[
   {
     id:3,
     userIcon:"https://assets.ccbp.in/frontend/react-js/male-avatar-img.png",
-    username:"Lorem Ipsum",
-    message:"Lorem Ipsum is simply duumy text of printing and typesetting industry. Lorem ipsum is",
+    username:"Vardanes Jovichu",
+    message:"Kerum Saan is simply duumy text of printing and typesetting industry. Lorem ipsum is",
     loveLike:2,
     views:2,
     comments:2,
@@ -41,7 +41,7 @@ const usersList=[
   {
     id:4,
     userIcon:"https://assets.ccbp.in/frontend/react-js/male-avatar-img.png",
-    username:"Lorem Ipsum",
+    username:"Larun Vasai",
     message:"Lorem Ipsum is simply duumy text of printing and typesetting industry. Lorem ipsum is",
     loveLike:2,
     views:2,
@@ -50,13 +50,100 @@ const usersList=[
   }
 ]
 
+const imagesList=[{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+{
+  imageUrl:"https://goindiastocks.com/Content/assets/images/logewithname.png",
+  altValue:"comapny",
+  className:'h-14 w-16 p-2'
+},
+]
+
 export default function Home() {
 
    const [isTrue,setSideBar]=useState(false)
+   const [whichBtn,setButton]=useState(true)
+   const [serachedValue,setSearched]=useState("")
+   const [usersArray,setUsersList]=useState(usersList)
 
   const onSeeBar=()=>{
     setSideBar(!isTrue)
   }
+  
+  const newUsersList=usersArray.filter(eachUserObj=>eachUserObj.username.toLowerCase().includes(serachedValue.toLocaleLowerCase()))
 
   return (
     <main className="min-h-screen bg-slate-100">
@@ -69,29 +156,17 @@ export default function Home() {
         <li className='text-slate-200 text-xs'>HINDHUNILVR</li>
         <li className='text-slate-200 text-xs'>2,557.50</li>
       </ul>
-      <div className='h-20 bg-cyan-100 flex space-x-3 pt-3 overflow-x-auto'>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
-      <img src="https://goindiastocks.com/Content/assets/images/logewithname.png" alt="logo" className='h-14 w-16 p-2'/>
+      <div className='h-20 sm:h-24 bg-cyan-100 '>
+        <h1 className="font-bold text-md text-red-500 hidden sm:contents mt-1">Featured Companies</h1>
+      <div className="flex justify-center space-x-3 pt-1 overflow-x-auto">
+           {
+            imagesList.map(eachItem =>(<img src={eachItem.imageUrl} alt={eachItem.altValue} className={eachItem.className}/>))
+           }
+      </div>
       </div>
       <div className="sm:hidden">
-        <button type="button" className='bg-cyan-900 h-10 text-white w-1/2'>Disscussion Fourm</button>
-        <button type="button" className='bg-cyan-900 h-10 text-white w-1/2'>Market Stories</button>
+        <button type="button" className='bg-cyan-900 h-10 text-white w-1/2' onClick={()=>(setButton(true))}>Disscussion Fourm</button>
+        <button type="button" className='bg-cyan-900 h-10 text-white w-1/2' onClick={()=>(setButton(false))}>Market Stories</button>
       </div>
       </div>
       
@@ -105,25 +180,25 @@ export default function Home() {
               </svg>
              </button>
             </div>} 
-        <div className='ml-3 max-h-96 overflow-y-scroll'>
+        <div className='ml-3'>
           <div>
           <h1 className="font-semibold text-red-600 text-xl hidden lg:contents">Disscussion Fourm</h1>
-          <h1 className='font-lg text-stone-950 font-bold mt-3'>Filter</h1>
+          <h1 className='font-lg text-stone-950 font-bold mt-3 ml-2'>Filter</h1>
           <div className='flex bg-white p-1 pt-4 pb-3 m-2 rounded-lg '>
             <button type="button" className='h-6 w-15 bg-red-700 text-white text-xs p-1 rounded-xl mr-1'>Section 1</button>
-            <button type="button" className='h-6 bg-cyan-800 text-white text-xs p-1 rounded-xl mr-1'>Section 1</button>
-            <button type="button" className='h-6 bg-amber-400 text-white text-xs p-1 rounded-xl'>Section 1</button>
+            <button type="button" className='h-6 bg-cyan-800 text-white text-xs p-1 rounded-xl mr-1'>Section 2</button>
+            <button type="button" className='h-6 bg-amber-400 text-white text-xs p-1 rounded-xl'>Section 3</button>
             <div className='h-7 ml-1 flex items-center border-2 border-current w-24 rounded-2xl pl-2'>
                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3 mt-0.5">
                     <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
                  </svg>
-                 <input type="search" placeholder='Search' className='h-6 w-14 bg-white ml-1 border-none outline-none text-xs' />
+                 <input type="search" placeholder='Search' className='h-6 w-14 bg-white ml-1 border-none outline-none text-xs' onChange={()=>(setSearched(event.target.value))}/>
             </div>
           </div>
         </div>
-        <ul>
+        <ul className="max-h-96 overflow-y-scroll">
           {
-            usersList.map(eachItem=> (<EachUser userDetailsObj={eachItem} key={eachItem.id}/>))
+            newUsersList.map(eachItem=> (<EachUser userDetailsObj={eachItem} key={eachItem.id}/>))
           }
         </ul>
         <div className='fixed bottom-16 right-3'>
@@ -132,10 +207,10 @@ export default function Home() {
             </svg>
         </div>
       </div>
-      </div>
-      <div className="hidden lg:contents">
+      </div> 
+      <div className="hidden md:contents ml-2 max-h-96">
       <MarketDetails/>
-      </div>
+      </div> 
       </div>
       <div className='bg-cyan-900 p-2 flex justify-center fixed bottom-0 right-0 w-full sm:hidden'>
         <ul className='flex space-x-12 text-slate-200 '>
